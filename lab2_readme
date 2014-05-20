@@ -1,0 +1,4 @@
+1. chroot-setup.sh: some cp directory changed, my vm's path is somehow different with the script
+2. 'sudo make check' cannot exploit the check, so I run it with 'sudo python check_lab2.py'
+3. My vm has no pymodules so I downloaded a new one.
+
