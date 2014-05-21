@@ -1,0 +1,25 @@
+#
+# [file:#lines]
+# desc
+#
+
+[zookd.c:59]
+the 'reqpath' can be overwritten by the 'url' from 'fd'
+    <http_request_line(fd, reqpath, env, &env_len)>
+
+[http.c:119]
+'value' can be overwritten by the header in url
+    <url_decode(value, sp)>
+
+[http.c:120]
+'envvar' can be overwritten by 'value'
+    <setenv(envvar, value, 1)>
+
+[zookd.c:35]
+'url' can be overwritten by the request from user
+    <recvfd(fd, url, sizeof(url), &svcfds[i])>   
+
+[zookd.c:38]
+'regexp' can be overwritten by 'url'
+    <snprintf(regexp, sizeof(regexp), "^%s$", url)>
+# many more come here

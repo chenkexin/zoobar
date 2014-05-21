@@ -1,0 +1,20 @@
+Exercise 2
+In exploit-2a I overflow the return address reqpath in zookd.c, 
+in exploit-2b I overflow the envvar[512] in http.c to save the file name 
+"/home/httpd/grades.txt"
+
+Exercise 3
+I use the reqpath here to overflow. url and regexp can also be used
+as regexp is also inited by url and url can be overflowed from user request. 
+Value and envvar can be used as value can be overwritten by header from user
+request and envvar can be overwritten by value.
+
+Exercise 4
+I use reqpath in exploit-4a and envvar in exploit-4b, url and 
+regexp can be also used as in fact they contain the same value with reqpath, 
+value can be used before it transfers its value to envvar.
+
+Exercise 5
+a.The profile from user may contain some malicious code affects the other users.
+b.There is no auth when transfering zoobars between users, so an attacker may
+call the transfer service to change the other users' information or others.
